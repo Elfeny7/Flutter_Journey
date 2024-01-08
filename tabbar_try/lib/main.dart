@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tabbar_try/bloc_manual/bloc_manual_main.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,8 +19,8 @@ class MainApp extends StatelessWidget {
             bottom: const TabBar(
               tabs: [
                 Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text('Home'),
+                  padding: EdgeInsets.only(bottom: 10, top: 10),
+                  child: Text('Bloc Manual'),
                 ),
                 Padding(
                   padding: EdgeInsets.all(10.0),
@@ -36,10 +37,10 @@ class MainApp extends StatelessWidget {
               ],
             ),
           ),
-          body: const TabBarView(
+          body:TabBarView(
             children: [
               Center(
-                child: Text('Home Page'),
+                child: BlocManualMain(),
               ),
               Center(
                 child: Text('List Page'),
