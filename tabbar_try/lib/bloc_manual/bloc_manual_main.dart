@@ -59,7 +59,7 @@ class _BlocManualMainState extends State<BlocManualMain> {
                   child: const Icon(Icons.science),
                   backgroundColor: Colors.lime,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 FloatingActionButton(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tabbar_try/bloc/bloc_main.dart';
 import 'package:tabbar_try/bloc_manual/bloc_manual_main.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MainApp extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.all(10.0),
-                  child: Text('List'),
+                  child: Text('Flutter BloC'),
                 ),
                 Padding(
                   padding: EdgeInsets.all(10.0),
@@ -37,13 +38,13 @@ class MainApp extends StatelessWidget {
               ],
             ),
           ),
-          body:TabBarView(
+          body: const TabBarView(
             children: [
               Center(
                 child: BlocManualMain(),
               ),
               Center(
-                child: Text('List Page'),
+                child: BlocMain(),
               ),
               Center(
                 child: Text('History Page'),
