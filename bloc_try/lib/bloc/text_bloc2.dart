@@ -4,7 +4,6 @@ enum TextTo { toLibrary, toPerpustakaan }
 
 class TextEvent {
   final TextTo textTo;
-  String? text;
 
   TextEvent({required this.textTo});
 }
