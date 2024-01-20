@@ -1,10 +1,12 @@
 import 'package:cubit_try/bloc/text_bloc.dart';
 import 'package:cubit_try/view/home.dart';
 import 'package:cubit_try/view/home2.dart';
+import 'package:cubit_try/view/home3.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/text_bloc2.dart';
+import 'bloc/text_bloc3/text_bloc3_bloc.dart';
 
 void main() {
   runApp(const MainApp());
@@ -17,11 +19,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     print('rebuild');
     return BlocProvider(
-      create: (context) => TextBloc2(),
+      create: (context) => TextBloc3Bloc(),
       child: MaterialApp(
         title: 'Library App',
         theme: ThemeData(primarySwatch: Colors.amber),
-        home: const HomeView2(),
+        home: const HomeView3(),
       ),
     );
   }

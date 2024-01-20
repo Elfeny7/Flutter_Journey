@@ -1,10 +1,13 @@
 part of 'text_bloc3_bloc.dart';
 
-enum TextTo { toLibrary, toPerpustakaan }
+enum TextToo { toLibrary, toPerpustakaan }
 
 @immutable
 sealed class TextBloc3Event {
-  final TextTo textTo;
+  const TextBloc3Event();
+}
 
-  const TextBloc3Event(this.textTo);
+class ChangeTextPressed3 extends TextBloc3Event {
+  final TextToo textTo;
+  const ChangeTextPressed3(this.textTo);
 }

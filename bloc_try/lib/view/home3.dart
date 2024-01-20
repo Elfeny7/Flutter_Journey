@@ -1,5 +1,6 @@
 import 'package:cubit_try/bloc/text_bloc.dart';
 import 'package:cubit_try/bloc/text_bloc2.dart';
+import 'package:cubit_try/bloc/text_bloc3/text_bloc3_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,7 +20,7 @@ class HomeView3 extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                BlocBuilder<TextBloc2, String>(
+                BlocBuilder<TextBloc3Bloc, TextBloc3State>(
                   builder: (context, state) {
                     return Container(
                       width: 100,
@@ -27,7 +28,7 @@ class HomeView3 extends StatelessWidget {
                       decoration: const BoxDecoration(
                         color: Colors.lime,
                       ),
-                      child: Center(child: Text(state)),
+                      child: Center(child: Text(state.text)),
                     );
                   },
                 ),
@@ -39,8 +40,8 @@ class HomeView3 extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         context
-                            .read<TextBloc2>()
-                            .add(ChangeTextPressed2(textTo: TextTo.toLibrary));
+                            .read<TextBloc3Bloc>()
+                            .add(const ChangeTextPressed3(TextToo.toLibrary));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,
@@ -52,9 +53,8 @@ class HomeView3 extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        context
-                            .read<TextBloc2>()
-                            .add(ChangeTextPressed2(textTo: TextTo.toPerpustakaan));
+                        context.read<TextBloc3Bloc>().add(
+                            const ChangeTextPressed3(TextToo.toPerpustakaan));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,
