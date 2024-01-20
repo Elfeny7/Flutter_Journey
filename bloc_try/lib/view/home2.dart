@@ -1,9 +1,10 @@
 import 'package:cubit_try/bloc/text_bloc.dart';
+import 'package:cubit_try/bloc/text_bloc2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomeView2 extends StatelessWidget {
+  const HomeView2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class HomeView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                BlocBuilder<TextBloc, String>(
+                BlocBuilder<TextBloc2, String>(
                   builder: (context, state) {
                     return Container(
                       width: 100,
@@ -38,8 +39,8 @@ class HomeView extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         context
-                            .read<TextBloc>()
-                            .add(ChangeTextPressed(value: "Library"));
+                            .read<TextBloc2>()
+                            .add(ChangeTextPressed2(textTo: TextTo.toLibrary));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,
@@ -52,8 +53,8 @@ class HomeView extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         context
-                            .read<TextBloc>()
-                            .add(ChangeTextPressed(value: "Perpustakaan"));
+                            .read<TextBloc2>()
+                            .add(ChangeTextPressed2(textTo: TextTo.toPerpustakaan));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,

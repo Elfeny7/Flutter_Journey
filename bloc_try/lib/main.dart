@@ -1,7 +1,10 @@
 import 'package:cubit_try/bloc/text_bloc.dart';
 import 'package:cubit_try/view/home.dart';
+import 'package:cubit_try/view/home2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'bloc/text_bloc2.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,11 +17,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     print('rebuild');
     return BlocProvider(
-      create: (context) => TextBloc(),
+      create: (context) => TextBloc2(),
       child: MaterialApp(
         title: 'Library App',
         theme: ThemeData(primarySwatch: Colors.amber),
-        home: HomeView(),
+        home: const HomeView2(),
       ),
     );
   }
